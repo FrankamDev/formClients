@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
+import toast from "react-hot-toast";
 export default function ContactIndex() {
   const [open, setOpen] = useState(false);
 
@@ -31,16 +31,39 @@ export default function ContactIndex() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault();
 
-    post("/lead", {
-      onSuccess: () => {
-        reset();
-        setOpen(false);
-      },
-    });
-  };
+//     post("/lead", {
+//       onSuccess: () => {
+//         reset();
+//         setOpen(false);
+//       },
+//     });
+//   };
+
+    const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  post("/lead", {
+    onSuccess: () => {
+      reset();
+      setOpen(false);
+
+      toast.success("Cahier des charges envoyé avec succès !", {
+        style: {
+          background: "#112240",
+          color: "#fff",
+          border: "1px solid #06b6d4",
+        },
+        iconTheme: {
+          primary: "#06b6d4",
+          secondary: "#0A1326",
+        },
+      });
+    },
+  });
+};
 
   const websiteTypes = [
     "E-commerce",
@@ -77,7 +100,7 @@ export default function ContactIndex() {
 
             <button
               onClick={() => setOpen(true)}
-              className="bg-cyan-500 hover:bg-cyan-400 text-[#0A1326] px-6 py-3 rounded-full text-sm font-medium transition"
+              className="bg-cyan-500 hover:bg-cyan-400 text-[#0A1326] px-6 py-3 rounded-[7px] text-sm font-medium transition"
             >
               Commencer
             </button>
