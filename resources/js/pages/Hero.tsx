@@ -73,7 +73,7 @@ export default function Hero() {
           >
             <div className="relative rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                src="/ccharge.png"
                 alt="Project planning"
                 className="w-full h-[320px] md:h-[480px] object-cover"
               />
