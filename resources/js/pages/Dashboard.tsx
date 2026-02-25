@@ -109,6 +109,7 @@ export default function Dashboard({ leads, totalLeads }: Props) {
                                     <th className="px-4 py-3">Email</th>
                                     <th className="px-4 py-3">Type</th>
                                     <th className="px-4 py-3">Budget</th>
+                                   <th className="px-4 py">Phone</th>
                                     <th className="px-4 py-3">Date</th>
                                 </tr>
                             </thead>
@@ -135,6 +136,9 @@ export default function Dashboard({ leads, totalLeads }: Props) {
 
                                         <td className="px-4 py-3">
                                             {lead.budget ?? '—'}
+                                        </td>
+                                        <td className="px-4 py-3">
+                                            {lead.phone ?? '—'}
                                         </td>
 
                                         <td className="px-4 py-3 text-muted-foreground">
