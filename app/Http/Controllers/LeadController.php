@@ -10,9 +10,9 @@ class LeadController extends Controller
 
 public function index()
 {
-    $leads = Lead::latest()->get();
+    $leads = Lead::latest()->paginate(10);
 
-    return inertia('Dashboard/LeadsIndex', [
+    return inertia('Dashboard/Leads/Index', [
         'leads' => $leads
     ]);
 }
