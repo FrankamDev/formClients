@@ -180,7 +180,7 @@ export default function ContactIndex() {
                   <div>
                     <p className="text-xs text-gray-400 mb-2">Budget estimatif</p>
                     <div className="flex gap-3 flex-wrap">
-                      {["<1000€", "1000€-5000€", "5000€+"].map((b) => (
+                      {["<50.000FCFA", "3000FCFA-50.000FCFA", "100.000FCFA , PLUS"].map((b) => (
                         <button
                           type="button"
                           key={b}
