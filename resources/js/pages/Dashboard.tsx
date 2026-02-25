@@ -65,6 +65,10 @@ const breadcrumbs: BreadcrumbItem[] = [
         title: 'Dashboard',
         href: dashboard().url,
     },
+    {
+        title: 'Acceuil',
+        href: '/',
+    },
 ];
 
 export default function Dashboard({ leads, totalLeads }: Props) {

@@ -25,10 +25,10 @@ export default function FinalCTA() {
           Remplissez le formulaire maintenant et démarrez sur des bases solides.
         </motion.p>
  
-        <Link  href='/commencer' prefetch
+        <Link prefetch  href='/commencer' 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-cyan-500 text-[#0A1326] px-8 py-3 rounded-full text-sm font-medium shadow-lg shadow-cyan-500/20"
+          className="bg-cyan-500 text-[#0A1326] px-8 py-3 text-sm font-medium shadow-lg shadow-cyan-500/20"
         >
           Commencer
         </Link>

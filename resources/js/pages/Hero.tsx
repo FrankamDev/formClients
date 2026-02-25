@@ -56,7 +56,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="flex justify-center md:justify-start"
             >
-              <Link prefetch href='/commencer' className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#0A1326] px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 shadow-lg shadow-cyan-500/20">
+              <Link prefetch href='/commencer' className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#0A1326] px-6 py-3 text-sm font-medium transition-all duration-300 shadow-lg shadow-cyan-500/20">
                 Commencer maintenant
                 <ArrowRight size={16} />
               </Link>
